@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     "interview.core",
     "interview.inventory",
     "interview.order",
+    "interview.profiles",
 ]
+
+AUTH_USER_MODEL = "profiles.UserProfile"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -126,6 +129,9 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATIC_ROOT = "interview/static"
+
+MEDIA_URL = "media/"
+MEDIA_ROOT = "interview/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
